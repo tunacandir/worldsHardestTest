@@ -25,7 +25,7 @@ namespace TSB3
         private void Form3_Load(object sender, EventArgs e)
         {
             progressBar1.Value = Form1.yuklenme;
-            Form1.yuklenme += 10;
+            Form1.yuklenme += 20;
             timer1.Interval = 1000;
             timer1.Enabled = true;
             checkBox1.Text = "Ay bir yıldızdır.";
@@ -68,6 +68,8 @@ namespace TSB3
                 this.Hide();
                 Form1.frm4.Show();
             }
+
+            timer1.Enabled = false;
         }
     }
 }
