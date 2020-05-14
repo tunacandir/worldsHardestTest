@@ -44,6 +44,11 @@ namespace TSB3
                 puan = 0;
             }
 
+            if (puan < 0)
+            {
+                puan = 0;
+            }
+
             label4.Text = "Skor : " + puan + "/100";
 
 
