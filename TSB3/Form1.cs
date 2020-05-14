@@ -21,6 +21,8 @@ namespace TSB3
         public static Form3 frm3 = new Form3();
         public static Form4 frm4 = new Form4();
         public static Form5 frm5 = new Form5();
+        public static Form6 frm6 = new Form6();
+        public static Form7 frm7 = new Form7();
         public Form1()
         {
             InitializeComponent();
@@ -36,6 +38,12 @@ namespace TSB3
         private void label1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            label1.Text = "!!!Dünyanın En Zor Sınavı!!!";
+            button1.Text = "BAŞLA";
         }
     }
 }

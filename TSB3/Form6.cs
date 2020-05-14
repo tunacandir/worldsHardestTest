@@ -10,25 +10,30 @@ using System.Windows.Forms;
 
 namespace TSB3
 {
-    public partial class Form5 : Form
+    public partial class Form6 : Form
     {
-        public Form5()
+        public Form6()
         {
             InitializeComponent();
         }
 
-        private void Form5_Load(object sender, EventArgs e)
+        private void Form6_Load(object sender, EventArgs e)
         {
             progressBar1.Value = Form1.yuklenme;
             Form1.yuklenme += 20;
             timer1.Interval = 1000;
             timer1.Enabled = true;
-            label1.Text = "Soru 4";
-            label2.Text = "Şu anda testin yüzde kaçını tamamladınız?";
-            radioButton1.Text = "%60";
-            radioButton2.Text = "%40";
-            radioButton3.Text = "%80";
-            radioButton4.Text = "%20";
+            label1.Text = "Soru 5";
+            label2.Text = "Aşağıdakilerden hangisi veya hangileri programlama dilidir?";
+            checkBox1.Text = "SQL";
+            checkBox2.Text = "Java";
+            checkBox3.Text = "HTML";
+            checkBox4.Text = "C#";
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -51,17 +56,17 @@ namespace TSB3
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (radioButton3.Checked)
+            if (checkBox2.Checked == true && checkBox4.Checked == true)
             {
                 Form1.dogru++;
                 this.Hide();
-                Form1.frm6.Show();
+                Form1.frm7.Show();
             }
             else
             {
                 Form1.yanlis++;
                 this.Hide();
-                Form1.frm6.Show();
+                Form1.frm7.Show();
             }
 
             timer1.Enabled = false;
