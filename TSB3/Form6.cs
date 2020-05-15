@@ -19,14 +19,12 @@ namespace TSB3
 
         private void Form6_Load(object sender, EventArgs e) //aşağıdaki kodlar form yüklenirken çalışmaya başlar
         {
-            FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            FormBorderStyle = System.Windows.Forms.FormBorderStyle.None; //formu borderless yapar
             progressBar1.Value = Form1.yuklenme; // progressbarın yeni değeri 80 olur
             Form1.yuklenme += 20; // progress bara yeni değer olarak 100 atar
             timer1.Interval = 1000; // bu formdaki timerın tickini 1 saniyedde bir çalıştırır
             timer1.Enabled = true; // bu fomrdaki timerı çalıştırır
-            label1.Text = "Soru 5";
-            label2.Text = "Aşağıdakilerden hangisi veya hangileri programlama dilidir?";
-            //üstteki iki satır labelların her birine farklı bir yazı yazdırır
+            label2.Text = "Aşağıdakilerden hangisi veya hangileri programlama dilidir?"; // labela soruyu yazdırır
             label3.Text = Form1.dakika.ToString(); //label 3 e dakika sayacındaki sayıyı string olarak yazdırır
             label4.Text = Form1.saniye.ToString(); //label 4 e saniye sayacındaki sayıyı string olarak yazdırır
             checkBox1.Text = "SQL";
@@ -34,8 +32,9 @@ namespace TSB3
             checkBox3.Text = "HTML";
             checkBox4.Text = "C#";
             //üstteki dört satır checkBox ların her birine farklı bir yazı yazdırır
-            button1.Image = TSB3.Properties.Resources.ilerle;
-            button1.Text = "";
+            button1.Image = TSB3.Properties.Resources.ilerle; // butona ilerle resmini yükle
+            button1.Text = ""; // butonun yazısını sil
+            label1.Image = TSB3.Properties.Resources.soru5; // labela soru5 resmini getirir
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -100,12 +99,13 @@ namespace TSB3
 
         private void button1_MouseHover(object sender, EventArgs e)
         {
-            button1.Image = TSB3.Properties.Resources.ilerle2;
+            button1.Image = TSB3.Properties.Resources.ilerle2; //butonun üzerine gelince resmi değiştir
         }
 
         private void button1_MouseLeave(object sender, EventArgs e)
         {
-            button1.Image = TSB3.Properties.Resources.ilerle;
+            button1.Image = TSB3.Properties.Resources.ilerle; //butonun üzerinden çıkınca resmi eski resimle değiştir
         }
     }
 }
+

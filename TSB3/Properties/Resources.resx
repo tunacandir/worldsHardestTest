@@ -139,4 +139,19 @@
   <data name="ilerle2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ilerle2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="soru1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\soru1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="soru2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\soru2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="soru3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\soru3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="soru4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\soru4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="soru5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\soru5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

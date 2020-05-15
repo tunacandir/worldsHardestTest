@@ -31,25 +31,11 @@ namespace TSB3
             InitializeComponent();
         }
 
-        private bool flag;
+        
         private void button1_Click(object sender, EventArgs e)
         {
             frm2.Show(); //2. formu açar
             this.Hide(); // bu formu saklar
-            System.Drawing.Bitmap bitmap1;
-
-            if (flag)
-            {
-                bitmap1 = TSB3.Properties.Resources.başla2;
-            }
-            else
-            {
-                bitmap1 = TSB3.Properties.Resources.başla2;
-            }
-
-            flag = !flag;
-
-            //button1.Image = TSB3.Properties.Resources.başla2;
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -59,20 +45,20 @@ namespace TSB3
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            FormBorderStyle = System.Windows.Forms.FormBorderStyle.None; //formu borderless yapar
             label1.Text = "!!!Dünyanın En Zor Testi!!!"; //labela yazı
-            button1.Image = TSB3.Properties.Resources.başla;
+            button1.Image = TSB3.Properties.Resources.başla; //başlangıçta butona başla resmini yerleştir
             
         }
 
         private void button1_MouseHover(object sender, EventArgs e)
         {
-            button1.Image = TSB3.Properties.Resources.başla2;
+            button1.Image = TSB3.Properties.Resources.başla2; //mouseun üzerine geldiğinde resmi başla 2 ye çevir
         }
 
         private void button1_MouseLeave(object sender, EventArgs e)
         {
-            button1.Image = TSB3.Properties.Resources.başla;
+            button1.Image = TSB3.Properties.Resources.başla; // mouseu hoverdan normale çektiğinde tekrardan başla resmi açılır
         }
     }
 }
