@@ -19,6 +19,7 @@ namespace TSB3
 
         private void Form5_Load(object sender, EventArgs e) //aşağıdaki kodlar form yüklenirken çalışmaya başlar
         {
+            FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             progressBar1.Value = Form1.yuklenme; // progressbarın yeni değeri 80 olur
             Form1.yuklenme += 20; // progress bara yeni değer olarak 100 atar
             timer1.Interval = 1000; // bu formdaki timerın tickini 1 saniyedde bir çalıştırır
@@ -33,6 +34,8 @@ namespace TSB3
             radioButton3.Text = "%80";
             radioButton4.Text = "%20";
             //üstteki dört satır radio buttonların her birine farklı bir yazı yazdırır
+            button1.Image = TSB3.Properties.Resources.ilerle;
+            button1.Text = "";
         }
 
         private void timer1_Tick(object sender, EventArgs e) // timerin her tickinde (1 saniyede bir çünkü interval 1000) çalışır
@@ -49,8 +52,8 @@ namespace TSB3
                 Form1.saniye = 0; //saniyeyi 0 yap
             }
 
-            label1.Text = Form1.dakika.ToString(); //her 1 saniyede bir label 1 e yeni saniyeyi yaz
-            label2.Text = Form1.saniye.ToString(); //her 1 saniyede bir label 2 ye yeni saniyeyi yaz
+            label3.Text = Form1.dakika.ToString(); //her 1 saniyede bir label 3 e yeni saniyeyi yaz
+            label4.Text = Form1.saniye.ToString(); //her 1 saniyede bir label 4 ye yeni saniyeyi yaz
         }
 
         private void button1_Click(object sender, EventArgs e) // butona basıldığında olacaklar
@@ -69,6 +72,16 @@ namespace TSB3
             }
 
             timer1.Enabled = false; //bu formdaki timerı kapat
+        }
+
+        private void button1_MouseHover(object sender, EventArgs e)
+        {
+            button1.Image = TSB3.Properties.Resources.ilerle2;
+        }
+
+        private void button1_MouseLeave(object sender, EventArgs e)
+        {
+            button1.Image = TSB3.Properties.Resources.ilerle;
         }
     }
 }

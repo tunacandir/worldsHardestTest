@@ -24,6 +24,7 @@ namespace TSB3
 
         private void Form3_Load(object sender, EventArgs e) //aşağıdaki kodlar form yüklenirken çalışmaya başlar
         {
+            FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             progressBar1.Value = Form1.yuklenme; // progress bara yeni değer olarak 40 atar
             label1.Text = Form1.dakika.ToString(); //labela hafızada olan dakikayı atar
             label2.Text = Form1.saniye.ToString(); //labela hafızada olan saniyeyi atar
@@ -35,6 +36,8 @@ namespace TSB3
             checkBox3.Text = "Dünya bir gezegendir.";
             checkBox4.Text = "Dünya bir yıldızdır.";
             //üstteki dört kod checkboxların içeriğini yazar
+            button1.Image = TSB3.Properties.Resources.ilerle;
+            button1.Text = "";
         }
 
         private void timer1_Tick(object sender, EventArgs e) // timerin her tickinde (1 saniyede bir çünkü interval 1000) çalışır
@@ -91,6 +94,16 @@ namespace TSB3
             }
 
             timer1.Enabled = false; //timerı gizle
+        }
+
+        private void button1_MouseHover(object sender, EventArgs e)
+        {
+            button1.Image = TSB3.Properties.Resources.ilerle2;
+        }
+
+        private void button1_MouseLeave(object sender, EventArgs e)
+        {
+            button1.Image = TSB3.Properties.Resources.ilerle;
         }
     }
 }

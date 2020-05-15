@@ -21,10 +21,11 @@ namespace TSB3
 
         private void Form7_Load(object sender, EventArgs e) //aşağıdaki kodlar form yüklenirken çalışmaya başlar
         {
+            FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             label1.Text = "Toplam geçen süre:" + Form1.dakika + " dakika, " + Form1.saniye + "saniye"; //label a geçen dakika ve saniyeyi yazdırır
             label2.Text = "Doğru : " + Form1.dogru; //labela doğru sayısını yazdırır
             label3.Text = "Yanlış : " + Form1.yanlis; //labela yanlış sayısını yazdırır
-            button1.Text = "BİTİR"; // butonun üzerine bitir yazar
+            button1.Image = TSB3.Properties.Resources.bitir; // butonun üzerine bitir resmini koyar
             if (Form1.yanlis == 5) // eğer her şeyi yanlış yaptıysan
             {
                 puan = 0; //puan sıfırlanır
@@ -58,6 +59,16 @@ namespace TSB3
         private void button1_Click(object sender, EventArgs e) // butona basınca olacakalar
         {
             Environment.Exit(0); // tüm uygulamayı kapatır
+        }
+
+        private void button1_MouseHover(object sender, EventArgs e)
+        {
+            button1.Image = TSB3.Properties.Resources.bitir2;
+        }
+
+        private void button1_MouseLeave(object sender, EventArgs e)
+        {
+            button1.Image = TSB3.Properties.Resources.bitir;
         }
     }
 }

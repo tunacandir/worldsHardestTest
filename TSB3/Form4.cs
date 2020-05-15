@@ -19,6 +19,7 @@ namespace TSB3
 
         private void Form4_Load(object sender, EventArgs e) //aşağıdaki kodlar form yüklenirken çalışmaya başlar
         {
+            FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             progressBar1.Value = Form1.yuklenme; // progressbarın yeni değeri 60 olur
             Form1.yuklenme += 20; // progress bara yeni değer olarak 100 atar
             timer1.Interval = 1000; // bu formdaki timerın tickini 1 saniyedde bir çalıştırır
@@ -34,6 +35,8 @@ namespace TSB3
             radioButton4.Text = "Köpek";
             //üstteki dört satır radio buttonların her birine farklı bir yazı yazdırır
             pictureBox1.Image = TSB3.Properties.Resources.dog; // resourceskısmına yüklediğim resmi başlangıçta picture boxa ekler
+            button1.Image = TSB3.Properties.Resources.ilerle;
+            button1.Text = "";
         }
 
         private void timer1_Tick(object sender, EventArgs e) // timerin her tickinde (1 saniyede bir çünkü interval 1000) çalışır
@@ -76,6 +79,16 @@ namespace TSB3
         private void label2_Click(object sender, EventArgs e)
         {
             
+        }
+
+        private void button1_MouseHover(object sender, EventArgs e)
+        {
+            button1.Image = TSB3.Properties.Resources.ilerle2;
+        }
+
+        private void button1_MouseLeave(object sender, EventArgs e)
+        {
+            button1.Image = TSB3.Properties.Resources.ilerle;
         }
     }
 }

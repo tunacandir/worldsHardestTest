@@ -137,5 +137,23 @@
   <ItemGroup>
     <None Include="Resources\dog.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\başla.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\başla2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ilerle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bitir.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bitir2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ilerle2.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

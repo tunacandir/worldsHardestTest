@@ -19,6 +19,7 @@ namespace TSB3
 
         private void Form6_Load(object sender, EventArgs e) //aşağıdaki kodlar form yüklenirken çalışmaya başlar
         {
+            FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             progressBar1.Value = Form1.yuklenme; // progressbarın yeni değeri 80 olur
             Form1.yuklenme += 20; // progress bara yeni değer olarak 100 atar
             timer1.Interval = 1000; // bu formdaki timerın tickini 1 saniyedde bir çalıştırır
@@ -33,6 +34,8 @@ namespace TSB3
             checkBox3.Text = "HTML";
             checkBox4.Text = "C#";
             //üstteki dört satır checkBox ların her birine farklı bir yazı yazdırır
+            button1.Image = TSB3.Properties.Resources.ilerle;
+            button1.Text = "";
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -54,8 +57,8 @@ namespace TSB3
                 Form1.saniye = 0; //saniyeyi 0 yap
             }
 
-            label1.Text = Form1.dakika.ToString(); //her 1 saniyede bir label 1 e yeni saniyeyi yaz
-            label2.Text = Form1.saniye.ToString(); //her 1 saniyede bir label 2 ye yeni saniyeyi yaz
+            label3.Text = Form1.dakika.ToString(); //her 1 saniyede bir label 3 e yeni saniyeyi yaz
+            label4.Text = Form1.saniye.ToString(); //her 1 saniyede bir label 4 ye yeni saniyeyi yaz
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -64,34 +67,45 @@ namespace TSB3
             {
                 Form1.yanlis++; //yanlışı arttırın
                 this.Hide(); //bu formu sakla
-                Form1.frm4.Show(); // form 4 ü göster
+                Form1.frm7.Show(); // form 4 ü göster
             }
             else if (checkBox2.Checked == true && checkBox4.Checked == true && checkBox1.Checked == true) //checkbox 1 2 ve 4 seçili ise
             {
                 Form1.yanlis++; //yanlış arttırır
                 this.Hide(); //bu formu sakla
-                Form1.frm4.Show(); // form4ü göster
+                Form1.frm7.Show(); // form4ü göster
             }
             else if (checkBox2.Checked == true && checkBox4.Checked == true && checkBox3.Checked == true) //checkbox 2 3 ve 4 seçili ise
             {
                 Form1.yanlis++; //yanlış arttırır
                 this.Hide(); //bu formu sakla
-                Form1.frm4.Show(); // form4ü göster
+                Form1.frm7.Show(); // form4ü göster
             }
             else if (checkBox2.Checked == true && checkBox4.Checked == true ) // check box 2 ve 4 seçiliyse
             {
                 Form1.dogru++; // doğru sayacını arttır
                 this.Hide(); //bu formu sakla
-                Form1.frm4.Show(); // 4. formu göster
+                Form1.frm7.Show(); // 4. formu göster
             }
             else
             {
                 Form1.yanlis++; //eğer farklı bir şeyler seçili ise yanlış say
                 this.Hide(); //bu formu sakla
-                Form1.frm4.Show(); // form4ü göster
+                Form1.frm7.Show(); // form4ü göster
             }
 
+
             timer1.Enabled = false; // bu formdaki timerı kapatır
+        }
+
+        private void button1_MouseHover(object sender, EventArgs e)
+        {
+            button1.Image = TSB3.Properties.Resources.ilerle2;
+        }
+
+        private void button1_MouseLeave(object sender, EventArgs e)
+        {
+            button1.Image = TSB3.Properties.Resources.ilerle;
         }
     }
 }

@@ -20,12 +20,15 @@ namespace TSB3
 
         private void Form2_Load(object sender, EventArgs e) //aşağıdaki kodlar form yüklenirken çalışmaya başlar
         {
+            FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             progressBar1.Value = Form1.yuklenme; //progres bara 20 değerini verir
             Form1.yuklenme += 20; //önümüzdeki form için progres barın yuklenme değerine 20 ekler
             timer1.Interval = 1000; // timerın saniyede bir çalışmasını sağlar
             timer1.Enabled = true; //timerın çalışmasını sağlar
             label3.Text = Form1.dakika.ToString(); //dakika sayacındaki tutulan sayıyı label3 e atar
             label4.Text = Form1.saniye.ToString(); //saniye sayacındaki tutulan sayıyı label4 e atar
+            button1.Image = TSB3.Properties.Resources.ilerle;
+            button1.Text = "";
         }
 
         private void button1_Click(object sender, EventArgs e) // butona basınca olacak olaylar
@@ -85,6 +88,16 @@ namespace TSB3
         private void label3_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button1_MouseHover(object sender, EventArgs e)
+        {
+            button1.Image = TSB3.Properties.Resources.ilerle2;
+        }
+
+        private void button1_MouseLeave(object sender, EventArgs e)
+        {
+            button1.Image = TSB3.Properties.Resources.ilerle;
         }
     }
 }
