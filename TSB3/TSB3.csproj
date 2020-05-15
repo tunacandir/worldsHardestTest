@@ -32,6 +32,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>uzayOyunuIcon.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -169,6 +172,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\soru1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ufoBlue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="uzayOyunuIcon.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
