@@ -21,42 +21,43 @@ namespace TSB3
 
         private void Form7_Load(object sender, EventArgs e) //aşağıdaki kodlar form yüklenirken çalışmaya başlar
         {
-            label1.Text = "Toplam geçen süre:" + Form1.dakika + " dakika, " + Form1.saniye + "saniye";
-            label2.Text = "Doğru : " + Form1.dogru;
-            label3.Text = "Yanlış : " + Form1.yanlis;
-            button1.Text = "BİTİR";
-            if (Form1.yanlis == 5)
+            label1.Text = "Toplam geçen süre:" + Form1.dakika + " dakika, " + Form1.saniye + "saniye"; //label a geçen dakika ve saniyeyi yazdırır
+            label2.Text = "Doğru : " + Form1.dogru; //labela doğru sayısını yazdırır
+            label3.Text = "Yanlış : " + Form1.yanlis; //labela yanlış sayısını yazdırır
+            button1.Text = "BİTİR"; // butonun üzerine bitir yazar
+            if (Form1.yanlis == 5) // eğer her şeyi yanlış yaptıysan
             {
-                puan = 0;
+                puan = 0; //puan sıfırlanır
             }
-            else
+            else //değilse
             {
-                puan = puan * Form1.dogru;
+                puan = puan * Form1.dogru; //her doğruyu için on puan eklenir
             }
 
-            sure = sure * Form1.dakika;
-            sure = sure + Form1.saniye;
+            sure = sure * Form1.dakika; //dakikayı saniyeye çevirir
+            sure = sure + Form1.saniye; //dakikadan gelen saniyeye elimizde tuttuğumuz saniyeyi ekleriz
             
-            sure = 50 - sure;
-            puan = puan + sure;
-
-            if (Form1.yanlis == 5)
+            sure = 50 - sure; // elimizdeki süreyi 50 den çıkarırız
+            puan = puan + sure; 
+            /* Üstteki satırın açıklaması eğer testi çözen kişi testi elli saniyenin altında bitirdiyse geri kalan her saniye için 1 puan kazanır
+             fakat bitiremediyse 50 saniyenin üstüne geçen her saniyede 1 puan kaybeder taki kaybedecek puan kalmayana kadar*/
+            if (Form1.yanlis == 5) //tekrardan kontrol ederek eğer hepsi yanlışsa 
             {
-                puan = 0;
+                puan = 0; //puanı sıfırlar
             }
 
-            if (puan < 0)
+            if (puan < 0) // eğer puan 0 ın altına düşmüşse
             {
-                puan = 0;
+                puan = 0; // puanı sıfırlar
             }
 
-            label4.Text = "Skor : " + puan + "/100";
+            label4.Text = "Skor : " + puan + "/100"; //label 4 e skorunuzu yazar
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e) // butona basınca olacakalar
         {
-            Environment.Exit(0);
+            Environment.Exit(0); // tüm uygulamayı kapatır
         }
     }
 }
