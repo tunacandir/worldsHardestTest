@@ -17,7 +17,7 @@ namespace TSB3
             InitializeComponent();
         }
 
-        private void Form6_Load(object sender, EventArgs e)
+        private void Form6_Load(object sender, EventArgs e) //aşağıdaki kodlar form yüklenirken çalışmaya başlar
         {
             progressBar1.Value = Form1.yuklenme;
             Form1.yuklenme += 20;
@@ -25,6 +25,8 @@ namespace TSB3
             timer1.Enabled = true;
             label1.Text = "Soru 5";
             label2.Text = "Aşağıdakilerden hangisi veya hangileri programlama dilidir?";
+            label3.Text = Form1.dakika.ToString();
+            label4.Text = Form1.saniye.ToString();
             checkBox1.Text = "SQL";
             checkBox2.Text = "Java";
             checkBox3.Text = "HTML";

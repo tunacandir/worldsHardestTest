@@ -17,14 +17,16 @@ namespace TSB3
             InitializeComponent();
         }
 
-        private void Form4_Load(object sender, EventArgs e)
+        private void Form4_Load(object sender, EventArgs e) //aşağıdaki kodlar form yüklenirken çalışmaya başlar
         {
-            progressBar1.Value = Form1.yuklenme;
+            progressBar1.Value = Form1.yuklenme; // progressbarın yeni değeri 60 olur
             Form1.yuklenme += 20;
             timer1.Interval = 1000;
             timer1.Enabled = true;
             label1.Text = "Soru 3";
             label2.Text = "Resimde görüğünüz hayvanın adı nedir?";
+            label3.Text = Form1.dakika.ToString();
+            label4.Text = Form1.saniye.ToString();
             radioButton1.Text = "Aslan";
             radioButton2.Text = "Ayı";
             radioButton3.Text = "Kurbağa";

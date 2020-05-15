@@ -17,7 +17,7 @@ namespace TSB3
             InitializeComponent();
         }
 
-        private void Form5_Load(object sender, EventArgs e)
+        private void Form5_Load(object sender, EventArgs e) //aşağıdaki kodlar form yüklenirken çalışmaya başlar
         {
             progressBar1.Value = Form1.yuklenme;
             Form1.yuklenme += 20;
@@ -25,6 +25,8 @@ namespace TSB3
             timer1.Enabled = true;
             label1.Text = "Soru 4";
             label2.Text = "Şu anda testin yüzde kaçını tamamladınız?";
+            label3.Text = Form1.dakika.ToString();
+            label4.Text = Form1.saniye.ToString();
             radioButton1.Text = "%60";
             radioButton2.Text = "%40";
             radioButton3.Text = "%80";

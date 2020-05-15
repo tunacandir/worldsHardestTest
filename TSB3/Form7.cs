@@ -19,11 +19,12 @@ namespace TSB3
             InitializeComponent();
         }
 
-        private void Form7_Load(object sender, EventArgs e)
+        private void Form7_Load(object sender, EventArgs e) //aşağıdaki kodlar form yüklenirken çalışmaya başlar
         {
             label1.Text = "Toplam geçen süre:" + Form1.dakika + " dakika, " + Form1.saniye + "saniye";
             label2.Text = "Doğru : " + Form1.dogru;
             label3.Text = "Yanlış : " + Form1.yanlis;
+            button1.Text = "BİTİR";
             if (Form1.yanlis == 5)
             {
                 puan = 0;
@@ -51,7 +52,11 @@ namespace TSB3
 
             label4.Text = "Skor : " + puan + "/100";
 
+        }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Environment.Exit(0);
         }
     }
 }
