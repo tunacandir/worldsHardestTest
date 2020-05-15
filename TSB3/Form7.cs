@@ -12,8 +12,8 @@ namespace TSB3
 {
     public partial class Form7 : Form
     {
-        public static int puan = 10;
-        public static int sure = 60;
+        public static int puan = 10; // skoru bulabilmek için kullanıldı
+        public static int sure = 60; // skoru bulabilmek için kullanıldı
         public Form7()
         {
             InitializeComponent();
