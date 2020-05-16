@@ -48,7 +48,8 @@ namespace TSB3
             FormBorderStyle = System.Windows.Forms.FormBorderStyle.None; //formu borderless yapar
             label1.Text = "!!!Dünyanın En Zor Testi!!!"; //labela yazı
             button1.Image = TSB3.Properties.Resources.başla; //başlangıçta butona başla resmini yerleştir
-            
+            frm1.BackgroundImage = TSB3.Properties.Resources.background;
+
         }
 
         private void button1_MouseHover(object sender, EventArgs e)
